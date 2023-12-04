@@ -14,7 +14,7 @@ class ManEatingMonkeys (event.Event):
     '''
 
     def __init__ (self):
-        self.name = " monkey attack"
+        self.name = " Monkey attack"
 
     def process (self, world):
         result = {}

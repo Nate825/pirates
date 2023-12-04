@@ -3,6 +3,8 @@ import game.config as config
 from game.display import announce
 from game.events import *
 import game.items as items
+import random
+import events.man_eating_bats as event 
 
 class Island (location.Location):
     def __init__ (self,x, y, w):
@@ -216,6 +218,18 @@ class Armory (location.SubLocation):
         if (verb == 'south'):
             config.the_player.next_loc = self.main_location.locations['cavern']
 
+class Bat(Monster):
+    def __init__ (self):
+        attacks = {}
+        attacks['bite'] = ['bites',random.randrange(60,80), (5,15)]
+        attacks['slash'] = ['slashes',random.randrange(60,80), (5,15)]
+        super().__init__('Man Eating Bats',random.randint(64,96), attacks, 100 + random.randint(0, 10))
+            
+    
+    
+    
+    
+    
     def enter (self):
         edibles = False
         for e in self.events:

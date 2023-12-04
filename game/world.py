@@ -1,4 +1,3 @@
-
 import game.location as location
 from game.locations import *
 from game.events import *
