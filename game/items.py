@@ -85,3 +85,45 @@ class Flintlock(Item):
         self.skill = "guns"
         self.verb = "shoot"
         self.verb2 = "shoots"
+
+class HandPistol(Item):
+    def __init__(self):
+        super().__init__("HandPistol", 500)
+        self.damage = (25,100)
+        self.firearm = True
+        self.charges = 1
+        self.skill = "guns"
+        self.verb = "shoot"
+        self.verb2 = "shoots"
+
+class Trident(Item):
+    def __init__(self):
+        super().__init__("Trident", 500)
+        self.damage = (20, 90)
+        self.skill = 'melee'
+        self.verb = 'stab'
+        self.verb2 = 'cut'
+
+class BroadSword(Item):
+    def __init__(self):
+        super().__init__('Broadsword', 500)
+        self.damage = (25, 90)
+        self.skill = 'swords'
+        self.verb = 'slash'
+        self.verb2 = 'slashes'
+
+class LongSword(Item):
+    def __init__(self):
+        super().__init__('Longsword', 100)
+        self.damage = (15, 80)
+        self.skill = 'swords'
+        self.verb = 'slash'
+        self.verb2 = 'stab'
+
+class Axe(Item):
+    def __init__(self):
+        super().__init__('Axe', 50)
+        self.damage = (10, 80)
+        self.skill = 'melee'
+        self.verb = 'chop'
+        self.verb2 = 'cut'
